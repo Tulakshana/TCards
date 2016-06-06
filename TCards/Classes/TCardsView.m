@@ -59,34 +59,7 @@ const static NSTimeInterval kMovingAnimationDuration = .4f;
     }
 }
 
-- (void)reloadData{
-    [self removeAllCards];
-    
 
-    NSMutableArray *tempArray = [[NSMutableArray alloc]init];
-    for (int i = 0; i < [_delegate numberOfItemsInCardsView:self] ; i++) {
-        UIView *card = [_delegate cardsView:self itemAtIndex:i];
-        
-        
-        CGSize size = [_delegate sizeForContainerCardsView:self];
-        if (i < ([_delegate numberOfItemsInCardsView:self] - 1)) {
-            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width - (NEXT_CARD_OFFSET * 2), size.height);
-            card.center = CGPointMake(self.center.x, self.center.y - NEXT_CARD_OFFSET);
-            
-        }else {
-            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width, size.height);
-            card.center = self.center;
-        }
-        
-        card.layer.zPosition = i;
-        
-        [self addSubview:card];
-        [tempArray addObject:card];
-    }
-    _cardsArray = (NSArray *)tempArray;
-    _currentIndex = (int)[_cardsArray count] - 1;
-    
-}
 
 - (void)removeAllCards{
     for (UIView *view in _cardsArray) {
@@ -140,11 +113,11 @@ const static NSTimeInterval kMovingAnimationDuration = .4f;
 - (void)setupGestures
 {
     
-    UISwipeGestureRecognizer *previousSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeToPrevious:)];
+    UISwipeGestureRecognizer *previousSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeToNext:)];
     [previousSwipe setDirection:UISwipeGestureRecognizerDirectionRight];
     [self addGestureRecognizer:previousSwipe];
     
-    UISwipeGestureRecognizer *nextSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeToNext:)];
+    UISwipeGestureRecognizer *nextSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipeToPrevious:)];
     [nextSwipe setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self addGestureRecognizer:nextSwipe];
     
@@ -181,18 +154,59 @@ const static NSTimeInterval kMovingAnimationDuration = .4f;
 - (void)didSwipeToPrevious:(UISwipeGestureRecognizer*)swipeGesture
 {
     NSLog(@"did swipe to previous");
-    [self setCurrentCard:_currentIndex - 1];
+    [self loadPrevious];
 }
 
 - (void)didSwipeToNext:(UISwipeGestureRecognizer*)swipeGesture
 {
     NSLog(@"did swipe to next");
-    [self setCurrentCard:_currentIndex + 1];
+    [self loadNext];
 }
 
 - (void)didTouchCard:(UITapGestureRecognizer*)tapGesture
 {
     NSLog(@"did touch card: %d",_currentIndex);
+    [_delegate cardsView:self didTouchItemAtIndex:_currentIndex];
+}
+
+#pragma mark - public methods
+
+- (void)loadNext{
+    [self setCurrentCard:_currentIndex - 1];
+    
+}
+
+- (void)loadPrevious{
+    [self setCurrentCard:_currentIndex + 1];
+}
+
+- (void)reloadData{
+    [self removeAllCards];
+    
+    
+    NSMutableArray *tempArray = [[NSMutableArray alloc]init];
+    for (int i = 0; i < [_delegate numberOfItemsInCardsView:self] ; i++) {
+        UIView *card = [_delegate cardsView:self itemAtIndex:i];
+        
+        
+        CGSize size = [_delegate sizeForContainerCardsView:self];
+        if (i < ([_delegate numberOfItemsInCardsView:self] - 1)) {
+            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width - (NEXT_CARD_OFFSET * 2), size.height);
+            card.center = CGPointMake(self.center.x, self.center.y - NEXT_CARD_OFFSET);
+            
+        }else {
+            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width, size.height);
+            card.center = self.center;
+        }
+        
+        card.layer.zPosition = i;
+        
+        [self addSubview:card];
+        [tempArray addObject:card];
+    }
+    _cardsArray = (NSArray *)tempArray;
+    _currentIndex = (int)[_cardsArray count] - 1;
+    
 }
 
 @end

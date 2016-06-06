@@ -66,4 +66,16 @@
     return card;
 }
 
+- (void)cardsView:(TCardsView *)cardsView didTouchItemAtIndex:(int)index{}
+
+#pragma mark - 
+
+- (IBAction)btnNextTapped:(id)sender{
+    [cardView loadNext];
+}
+
+- (IBAction)btnPreviousTapped:(id)sender{
+    [cardView loadPrevious];
+}
+
 @end

@@ -19,16 +19,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-fv-ktt" customClass="TCardsView">
-                                <rect key="frame" x="20" y="28" width="560" height="552"/>
+                                <rect key="frame" x="20" y="28" width="560" height="514"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.0" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-sg-u6g">
+                                <rect key="frame" x="20" y="547" width="91" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="ZQu-Hq-LaW"/>
+                                    <constraint firstAttribute="height" constant="53" id="auq-45-RNJ"/>
+                                </constraints>
+                                <state key="normal" title="&lt;- Previous"/>
+                                <connections>
+                                    <action selector="btnPreviousTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ey-4V-PYH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORl-hW-bNL">
+                                <rect key="frame" x="489" y="548" width="91" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="OwU-fX-7KC"/>
+                                    <constraint firstAttribute="width" constant="91" id="zVZ-Nf-e8R"/>
+                                </constraints>
+                                <state key="normal" title="Next -&gt;"/>
+                                <connections>
+                                    <action selector="btnNextTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3IQ-Q9-jWX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="b8Q-fv-ktt" secondAttribute="trailing" id="PgS-lD-pNR"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b8Q-fv-ktt" secondAttribute="bottom" constant="20" id="Qud-3Z-QRf"/>
-                            <constraint firstItem="b8Q-fv-ktt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="adA-Wh-szK"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="b8Q-fv-ktt" secondAttribute="leading" id="g8o-vQ-otC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b8Q-fv-ktt" secondAttribute="trailing" id="8k4-ia-END"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ORl-hW-bNL" secondAttribute="trailing" id="K5n-49-rEh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="b8Q-fv-ktt" secondAttribute="leading" id="M5O-nK-Ibu"/>
+                            <constraint firstItem="b8Q-fv-ktt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="VRV-rH-1Xx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="foQ-sg-u6g" secondAttribute="leading" id="oLo-vZ-1yH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="foQ-sg-u6g" secondAttribute="bottom" id="r0w-Li-Hxy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b8Q-fv-ktt" secondAttribute="bottom" constant="58" id="yPg-ZV-gfO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ORl-hW-bNL" secondAttribute="bottom" id="zV5-pQ-Wm2"/>
                         </constraints>
                     </view>
                     <connections>
