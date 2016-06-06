@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5394D2A21CE591E300BF94CF /* TCardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5394D2A11CE591E300BF94CF /* TCardsView.m */; };
+		53A670CA1CE48EC200D92B49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A670C91CE48EC200D92B49 /* main.m */; };
+		53A670CD1CE48EC200D92B49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A670CC1CE48EC200D92B49 /* AppDelegate.m */; };
+		53A670D01CE48EC200D92B49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A670CF1CE48EC200D92B49 /* ViewController.m */; };
+		53A670D31CE48EC200D92B49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A670D11CE48EC200D92B49 /* Main.storyboard */; };
+		53A670D51CE48EC200D92B49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A670D41CE48EC200D92B49 /* Assets.xcassets */; };
+		53A670D81CE48EC200D92B49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A670D61CE48EC200D92B49 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5394D2A01CE591E300BF94CF /* TCardsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TCardsView.h; path = Classes/TCardsView.h; sourceTree = "<group>"; };
+		5394D2A11CE591E300BF94CF /* TCardsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TCardsView.m; path = Classes/TCardsView.m; sourceTree = "<group>"; };
+		53A670C51CE48EC200D92B49 /* TCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A670C91CE48EC200D92B49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53A670CB1CE48EC200D92B49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		53A670CC1CE48EC200D92B49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		53A670CE1CE48EC200D92B49 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		53A670CF1CE48EC200D92B49 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		53A670D21CE48EC200D92B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53A670D41CE48EC200D92B49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53A670D71CE48EC200D92B49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53A670D91CE48EC200D92B49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53A670C21CE48EC200D92B49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53A670BC1CE48EC200D92B49 = {
+			isa = PBXGroup;
+			children = (
+				53A670C71CE48EC200D92B49 /* TCards */,
+				53A670C61CE48EC200D92B49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53A670C61CE48EC200D92B49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53A670C51CE48EC200D92B49 /* TCards.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53A670C71CE48EC200D92B49 /* TCards */ = {
+			isa = PBXGroup;
+			children = (
+				53A670CB1CE48EC200D92B49 /* AppDelegate.h */,
+				53A670CC1CE48EC200D92B49 /* AppDelegate.m */,
+				53A670CE1CE48EC200D92B49 /* ViewController.h */,
+				53A670CF1CE48EC200D92B49 /* ViewController.m */,
+				53A670D11CE48EC200D92B49 /* Main.storyboard */,
+				53A670D41CE48EC200D92B49 /* Assets.xcassets */,
+				53A670D61CE48EC200D92B49 /* LaunchScreen.storyboard */,
+				53A670D91CE48EC200D92B49 /* Info.plist */,
+				53A670C81CE48EC200D92B49 /* Supporting Files */,
+				53A670E21CE48F3F00D92B49 /* Classes */,
+			);
+			path = TCards;
+			sourceTree = "<group>";
+		};
+		53A670C81CE48EC200D92B49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53A670C91CE48EC200D92B49 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53A670E21CE48F3F00D92B49 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5394D2A01CE591E300BF94CF /* TCardsView.h */,
+				5394D2A11CE591E300BF94CF /* TCardsView.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53A670C41CE48EC200D92B49 /* TCards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A670DC1CE48EC200D92B49 /* Build configuration list for PBXNativeTarget "TCards" */;
+			buildPhases = (
+				53A670C11CE48EC200D92B49 /* Sources */,
+				53A670C21CE48EC200D92B49 /* Frameworks */,
+				53A670C31CE48EC200D92B49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TCards;
+			productName = TCards;
+			productReference = 53A670C51CE48EC200D92B49 /* TCards.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53A670BD1CE48EC200D92B49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Tulakshana Weerasooriya";
+				TargetAttributes = {
+					53A670C41CE48EC200D92B49 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 53A670C01CE48EC200D92B49 /* Build configuration list for PBXProject "TCards" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53A670BC1CE48EC200D92B49;
+			productRefGroup = 53A670C61CE48EC200D92B49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53A670C41CE48EC200D92B49 /* TCards */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53A670C31CE48EC200D92B49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A670D81CE48EC200D92B49 /* LaunchScreen.storyboard in Resources */,
+				53A670D51CE48EC200D92B49 /* Assets.xcassets in Resources */,
+				53A670D31CE48EC200D92B49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53A670C11CE48EC200D92B49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A670D01CE48EC200D92B49 /* ViewController.m in Sources */,
+				53A670CD1CE48EC200D92B49 /* AppDelegate.m in Sources */,
+				53A670CA1CE48EC200D92B49 /* main.m in Sources */,
+				5394D2A21CE591E300BF94CF /* TCardsView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53A670D11CE48EC200D92B49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A670D21CE48EC200D92B49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53A670D61CE48EC200D92B49 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A670D71CE48EC200D92B49 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53A670DA1CE48EC200D92B49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		53A670DB1CE48EC200D92B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53A670DD1CE48EC200D92B49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TCards/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tulakshana.TCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		53A670DE1CE48EC200D92B49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TCards/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tulakshana.TCards;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53A670C01CE48EC200D92B49 /* Build configuration list for PBXProject "TCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A670DA1CE48EC200D92B49 /* Debug */,
+				53A670DB1CE48EC200D92B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A670DC1CE48EC200D92B49 /* Build configuration list for PBXNativeTarget "TCards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A670DD1CE48EC200D92B49 /* Debug */,
+				53A670DE1CE48EC200D92B49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53A670BD1CE48EC200D92B49 /* Project object */;
+}
