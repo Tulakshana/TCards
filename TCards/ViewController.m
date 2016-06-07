@@ -44,6 +44,11 @@
 - (int)numberOfItemsInCardsView:(TCardsView *)cardsView{
     return 5;
 }
+
+- (int)numberOfVisibleItemsInCardsView:(TCardsView *)cardsView{
+    return 3;
+}
+
 - (UIView *)cardsView:(TCardsView *)cardsView itemAtIndex:(int)index{
     UIView *card = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
     [card setBackgroundColor:[UIColor colorWithRed:180./255. green:180./255. blue:180./255. alpha:1.]];

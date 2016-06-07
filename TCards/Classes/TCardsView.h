@@ -22,6 +22,7 @@
 
 - (CGSize)sizeForContainerCardsView:(TCardsView *)cardsView;
 - (int)numberOfItemsInCardsView:(TCardsView *)cardsView;
+- (int)numberOfVisibleItemsInCardsView:(TCardsView *)cardsView;
 - (UIView *)cardsView:(TCardsView *)cardsView itemAtIndex:(int)index;
 - (void)cardsView:(TCardsView *)cardsView didTouchItemAtIndex:(int)index;
 @end

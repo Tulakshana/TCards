@@ -134,13 +134,19 @@ const static NSTimeInterval kMovingAnimationDuration = .4f;
                          for (int i = 0; i <= _currentIndex; i++) {
                              UIView *singleView = [_cardsArray objectAtIndex:i];
                              CGSize size = [_delegate sizeForContainerCardsView:self];
-                             if (i < _currentIndex) {
-                                 singleView.frame = CGRectMake(singleView.frame.origin.x, singleView.frame.origin.y, size.width - (NEXT_CARD_OFFSET * 2), size.height);
-                                 singleView.center = CGPointMake(self.center.x, self.center.y - NEXT_CARD_OFFSET);
+                             
+                             int indexOfLastVisibleCard = _currentIndex - [_delegate numberOfVisibleItemsInCardsView:self] + 1;
+                             
+                             if (i <= indexOfLastVisibleCard) {
+                                 int numberOfCardsBeforeThisCard = (_currentIndex - indexOfLastVisibleCard);
+                                 CGFloat offset = NEXT_CARD_OFFSET * numberOfCardsBeforeThisCard;
+                                 singleView.frame = CGRectMake(singleView.frame.origin.x, singleView.frame.origin.y, size.width - (offset * 2), size.height);
+                                 singleView.center = CGPointMake(self.center.x, self.center.y - offset);
                              }else {
-                                 singleView.frame = CGRectMake(singleView.frame.origin.x, singleView.frame.origin.y, size.width, size.height);
-                                 singleView.center = self.center;
-                                 
+                                 int numberOfCardsBeforeThisCard = (_currentIndex - i);
+                                 CGFloat offset = NEXT_CARD_OFFSET * numberOfCardsBeforeThisCard;
+                                 singleView.frame = CGRectMake(singleView.frame.origin.x, singleView.frame.origin.y, size.width - (offset * 2), size.height);
+                                 singleView.center = CGPointMake(self.center.x, self.center.y - offset);
                              }
                          }
                      } completion:^(BOOL finished) {
@@ -188,15 +194,20 @@ const static NSTimeInterval kMovingAnimationDuration = .4f;
     for (int i = 0; i < [_delegate numberOfItemsInCardsView:self] ; i++) {
         UIView *card = [_delegate cardsView:self itemAtIndex:i];
         
-        
         CGSize size = [_delegate sizeForContainerCardsView:self];
-        if (i < ([_delegate numberOfItemsInCardsView:self] - 1)) {
-            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width - (NEXT_CARD_OFFSET * 2), size.height);
-            card.center = CGPointMake(self.center.x, self.center.y - NEXT_CARD_OFFSET);
-            
+        
+        int indexOfLastVisibleCard = [_delegate numberOfItemsInCardsView:self] - [_delegate numberOfVisibleItemsInCardsView:self];
+        
+        if (i < indexOfLastVisibleCard) {
+            int numberOfCardsBeforeThisCard = (([_delegate numberOfItemsInCardsView:self] - 1) - indexOfLastVisibleCard);
+            CGFloat offset = NEXT_CARD_OFFSET * numberOfCardsBeforeThisCard;
+            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width - (offset * 2), size.height);
+            card.center = CGPointMake(self.center.x, self.center.y - offset);
         }else {
-            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width, size.height);
-            card.center = self.center;
+            int numberOfCardsBeforeThisCard = (([_delegate numberOfItemsInCardsView:self] - 1) - i);
+            CGFloat offset = NEXT_CARD_OFFSET * numberOfCardsBeforeThisCard;
+            card.frame = CGRectMake(card.frame.origin.x, card.frame.origin.y, size.width - (offset * 2), size.height);
+            card.center = CGPointMake(self.center.x, self.center.y - offset);
         }
         
         card.layer.zPosition = i;
