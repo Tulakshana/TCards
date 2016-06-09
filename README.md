@@ -12,3 +12,7 @@ A simple stacked card view inspired by UPCardsCarousel (https://github.com/ink-s
 ``` ruby
 pod 'TCards', :git => 'https://github.com/Tulakshana/TCards.git'
 ```
+
+### TODO
+
+Optimize memory management for large number of cards
