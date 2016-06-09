@@ -13,6 +13,6 @@ A simple stacked card view inspired by UPCardsCarousel (https://github.com/ink-s
 pod 'TCards', :git => 'https://github.com/Tulakshana/TCards.git'
 ```
 
-### TODO
+### Todo
 
 Optimize memory management for large number of cards
